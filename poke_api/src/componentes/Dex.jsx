@@ -5,6 +5,7 @@ export const Dex = () => {
 
      // Usamos un Estado para almacenar la URL de la imagen del Pokémon.
     const [spritesImg, setSpritesImg] = useState([]);
+    const [pokemones, setPokemones] = useState([]);
 
 
     //Funcion asincronioca para obtener la imagen
@@ -12,17 +13,25 @@ export const Dex = () => {
         
         const imagenSprite = []; //Declaramos un arreglo que nos ayudará a contener la imagen
 
-        // Hacemos la petición HTTP a la API donde dicha peticion sera guardada en la variable "sprite"
+        //Hacemos la petición HTTP a la API donde dicha peticion sera guardada en la variable "sprite"
         const sprite = await fetch("https://pokeapi.co/api/v2/pokemon-form/2/");
 
         //La peticion la convertiremos en un objeto JSON para poder acceder a sus propiedades (dicho formato se guardara en la variable imagenJson)
         const imagenJson = await sprite.json();
 
-        //guardamos (o pusheamos ) en el arreglo, la imagen extraida (desde front_default)
+        //Guardamos (o pusheamos ) en el arreglo, la imagen extraida (desde front_default)
         imagenSprite.push( imagenJson.sprites.front_default);
 
-        //actualizamos el estado con la nueva imagen
+        //Actualizamos el estado con la nueva imagen
         setSpritesImg( imagenSprite ) ;
+    }
+
+    const obtenerDatos = async () =>{
+        const respuesta = await fetch("https://pokeapi.co/api/v2/pokemon/2")
+        const listaPokemones = await respuesta.json();
+        const { results } = listaPokemones;
+        setPokemones(results);
+
     }
 
     //Al cargar la pagina, useEffect se encarga de mandar a llamar (en este caso) a la funcion; obtenerImagen 
@@ -50,7 +59,7 @@ export const Dex = () => {
                 <tbody>
 
                     <tr>
-                        <td></td>
+                        <td>{pokemones.name}</td>
                         <td></td>
                         <td></td>
                         <td>
