@@ -49,40 +49,62 @@ export const Poke = () => {
 
   return (
   <div>
+    <div className="text-center p-6">
 
-    <div className="text-center space-y-6 p-6">
       <h1 className="text-4xl font-bold text-gray-800">Pokedex</h1>
 
-      <img className=" bg-[#D32453] w-[400px] h-[650px] object-cover mx-auto border-2 border-gray-900 rounded-2xl shadow-2xl" src="sprites/Pokedex.svg" alt="pokedex" />
+      {/* Contenedor imagen + contenido */}
+      <div className="relative w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
 
+        <img
+          className=" w-full h-full object-cover rounded-2xl"
+          src="sprites/PokedexV2.svg"
+          alt="pokedex"
+        />
 
-      <h1>Hola Mundo</h1>
+        <img className='absolute top-[120px] left-1/2 -translate-x-1/2 w-[350px] h-[350px] border-2 border-gray-900 rounded-xl'
+        src='sprites/fondo.png' alt="img poke" />
 
-      <button onClick={obtenerPokemon}>Buscar</button>
+        <img className='absolute top-[90px] left-1/2 -translate-x-1/2 w-2xl'
+        src={spritesImg} alt="img poke" />
 
-      <input id="poke" type="text" placeholder='Numero de pokemon' />
+        <div className='absolute top-[490px] w-[350px] left-1/2 -translate-x-1/2 bg-[#636363] p-4 border-2 border-gray-950 rounded-[6px]'>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Imagen</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{pokemon.id}</td>
-            <td>{pokemon.name}</td>
-            <td>{pokemon.types?.[0]?.type?.name}</td>
-            <td>
-              <img src={spritesImg} alt="img poke" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <div className='bg-[#539A44] border-2 border-gray-950 rounded-[6px] w-full font-bold text-gray-900'>
+            <table>
+              <thead className='text-gray-950'>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className='px-6'>{pokemon.id}</td>
+                  <td className='px-6'>{pokemon.name}</td>
+                  <td className='px-6'>{pokemon.types?.[0]?.type?.name}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button className=" bg-gray-800
+          text-white font-bold mr-1 py-1 mt-2 px-2 border-2 border-gray-950 rounded-[6px]" onClick={obtenerPokemon}>Buscar</button>
+
+          <input id="poke" type="text" placeholder='Numero de pokemon'
+            className="
+            py-1 px-2 border-2 bg-[#539A44] border-gray-950 rounded-[6px]
+            font-bold  text-gray-950 
+            focus:bg-[#539A44] focus:outline-none
+            autofill:bg-[#539A44] autofill:text-gray-950
+            "/>
+        </div>
+
+      </div>
+
     </div>
+
   </div>
   )
 }

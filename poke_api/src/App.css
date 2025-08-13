@@ -13,3 +13,8 @@ body{
     background-size: 64px 64px;
     image-rendering: pixelated;
 }
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #539A44 inset !important;
+  -webkit-text-fill-color: rgb(34, 34, 34) !important;
+}
