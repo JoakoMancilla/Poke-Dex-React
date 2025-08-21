@@ -104,7 +104,7 @@ export const Poke = () => {
 
       {/* Relative en el contenedor, absolute en los elementos superpuestos.*/}
       {/* Contenedor imagen + contenido */}
-      <div className="relative w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
+<div className="relative w-full max-w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
 
         <img
           className="w-full h-full object-cover rounded-2xl"
@@ -112,13 +112,17 @@ export const Poke = () => {
           alt="pokedex"
         />
 
-        <img className='absolute top-[110px] left-1/2 -translate-x-1/2 w-[350px] h-[350px] border-2 border-gray-900 rounded-xl'
-        src='sprites/fondo.png' alt="img poke" />
+        <img
+          className="absolute top-[110px] left-1/2 -translate-x-1/2 w-[90%] max-w-[350px] h-auto border-2 border-gray-900 rounded-xl"
+          src="sprites/fondo.png"
+          alt="img poke"
+        />
+
 
         <img className='absolute top-[90px] left-1/2 -translate-x-1/2 w-2xl'
         src={spritesImg} alt="img poke" />
 
-        <div className='absolute top-[470px] w-[350px] left-1/2 -translate-x-1/2 bg-[#636363] p-2 border-2 border-gray-950 rounded-[6px]'>
+        <div className="absolute top-[470px] w-[90%] max-w-[350px] left-1/2 -translate-x-1/2 bg-[#636363] p-2 border-2 border-gray-950 rounded-[6px]">
 
           <div className='bg-[#539A44] border-2 border-gray-950 rounded-[6px] w-full font-bold text-gray-900'>
             <table>
