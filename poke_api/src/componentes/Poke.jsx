@@ -123,8 +123,8 @@ export const Poke = () => {
 
         <div className="absolute top-[470px] w-[90%] max-w-[350px] left-1/2 -translate-x-1/2 bg-[#636363] p-2 border-2 border-gray-950 rounded-[6px]">
 
-          <div className='bg-[#539A44] border-2 border-gray-950 rounded-[6px] w-full font-bold text-gray-900'>
-            <table>
+          <div className='bg-[#539A44] border-2 border-gray-950 rounded-[6px] w-full  font-bold text-gray-900'>
+            <table className='mx-auto'>
               <thead className='text-gray-950'>
                 <tr>
                   <th>ID</th>
