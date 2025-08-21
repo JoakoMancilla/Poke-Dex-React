@@ -104,7 +104,7 @@ export const Poke = () => {
 
       {/* Relative en el contenedor, absolute en los elementos superpuestos.*/}
       {/* Contenedor imagen + contenido */}
-<div className="relative w-full max-w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
+      <div className="relative w-full max-w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
 
         <img
           className="w-full h-full object-cover rounded-2xl"
@@ -117,7 +117,6 @@ export const Poke = () => {
           src="sprites/fondo.png"
           alt="img poke"
         />
-
 
         <img className='absolute top-[90px] left-1/2 -translate-x-1/2 w-2xl'
         src={spritesImg} alt="img poke" />

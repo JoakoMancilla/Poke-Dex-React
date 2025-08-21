@@ -1,4 +1,5 @@
 import './App.css'
+import { Footer } from './componentes/Footer'
 import { Nav } from './componentes/Nav'
 import { Poke } from './componentes/Poke'
 
@@ -9,6 +10,8 @@ function App() {
       <Nav/>
       <br/>
       <Poke/>
+      <br/>
+      <Footer/>
     </>
   )
 }
