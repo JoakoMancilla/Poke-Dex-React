@@ -91,7 +91,7 @@ export const Poke = () => {
 
   return (
   <div>
-    <div className="text-center p-6">
+    <div className="p-6 text-center">
 
       {mensaje &&  //render condicional: solo muestra el <div> si mensaje tiene contenido.
         <div className='absolute z-50 top-[800px] border-2 p-3 bg-gray-300 text-gray-950 rounded-full font-bold
@@ -107,7 +107,7 @@ export const Poke = () => {
       <div className="relative w-full max-w-[400px] h-[650px] bg-[#D32453] mx-auto border-4 border-gray-900 rounded-2xl shadow-2xl">
 
         <img
-          className="w-full h-full object-cover rounded-2xl"
+          className="object-cover w-full h-full rounded-2xl"
           src="sprites/PokeDex.svg"
           alt="pokedex"
         />
@@ -150,9 +150,9 @@ export const Poke = () => {
             autofill:bg-[#539A44] autofill:text-gray-950
             "/>
 
-          <div className="justify-start float-left mt-2 flex gap-2">
+          <div className='flex justify-start float-left gap-2 mt-2'>
             <button
-              className="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-100 font-bold border-2 border-gray-950 rounded-full hover:bg-gray-600 hover:cursor-grab shadow-lg"
+              className="flex items-center justify-center w-10 h-10 font-bold text-gray-100 bg-gray-800 border-2 rounded-full shadow-lg border-gray-950 hover:bg-gray-600 hover:cursor-grab"
               aria-label="Atras"
               onClick={atras}
             >
@@ -160,7 +160,7 @@ export const Poke = () => {
             </button>
 
             <button
-              className="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-100 font-bold border-2 border-gray-950 rounded-full hover:bg-gray-600 hover:cursor-grab shadow-lg"
+              className="flex items-center justify-center w-10 h-10 font-bold text-gray-100 bg-gray-800 border-2 rounded-full shadow-lg border-gray-950 hover:bg-gray-600 hover:cursor-grab"
               aria-label="Adelante"
               onClick={avanzar}
             >
@@ -168,9 +168,9 @@ export const Poke = () => {
             </button>
           </div> 
 
-          <div className="justify-end mt-2 flex gap-2">
+          <div className="flex justify-end gap-2 mt-2">
             <button
-              className="flex items-center justify-center w-10 h-10 bg-green-800 text-green-400 font-bold border-2 border-green-950 rounded-full hover:bg-green-600 hover:cursor-grab shadow-lg"
+              className="flex items-center justify-center w-10 h-10 font-bold text-green-400 bg-green-800 border-2 rounded-full shadow-lg border-green-950 hover:bg-green-600 hover:cursor-grab"
               aria-label="Aceptar"
               onClick={obtenerPokemon}
             >
@@ -178,7 +178,7 @@ export const Poke = () => {
             </button>
 
             <button
-              className="flex items-center justify-center w-10 h-10 bg-red-800 text-red-400 font-bold border-2 border-red-950 rounded-full hover:bg-red-600 hover:cursor-grab shadow-lg"
+              className="flex items-center justify-center w-10 h-10 font-bold text-red-400 bg-red-800 border-2 rounded-full shadow-lg border-red-950 hover:bg-red-600 hover:cursor-grab"
               aria-label="Cancelar"
               onClick={limpiarCasilla}
             >

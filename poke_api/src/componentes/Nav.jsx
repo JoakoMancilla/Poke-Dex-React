@@ -4,13 +4,13 @@ import React from 'react'
 export const Nav = () => {
   return (
     <nav className="bg-[#DE284B] text-white shadow-md">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="flex items-center justify-between max-w-6xl px-4 py-3 mx-auto">
         <h1 className="text-2xl font-bold select-none">Pokédex</h1>
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden space-x-8 md:flex">
           <li>
             <a
               href="#home"
-              className="hover:text-yellow-300 transition-colors duration-300 font-medium"
+              className="font-medium transition-colors duration-300 hover:text-yellow-300"
             >
               Inicio
             </a>
@@ -18,7 +18,7 @@ export const Nav = () => {
           <li>
             <a
               href="#pokemon"
-              className="hover:text-yellow-300 transition-colors duration-300 font-medium"
+              className="font-medium transition-colors duration-300 hover:text-yellow-300"
             >
               Pokémon
             </a>
@@ -26,7 +26,7 @@ export const Nav = () => {
           <li>
             <a
               href="#types"
-              className="hover:text-yellow-300 transition-colors duration-300 font-medium"
+              className="font-medium transition-colors duration-300 hover:text-yellow-300"
             >
               Tipos
             </a>
@@ -34,14 +34,14 @@ export const Nav = () => {
           <li>
             <a
               href="#about"
-              className="hover:text-yellow-300 transition-colors duration-300 font-medium"
+              className="font-medium transition-colors duration-300 hover:text-yellow-300"
             >
               Acerca
             </a>
           </li>
         </ul>
         {/* Menú para móvil (simple texto) */}
-        <div className="md:hidden text-yellow-300 font-semibold cursor-pointer">
+        <div className="font-semibold text-yellow-300 cursor-pointer md:hidden">
           Menú
         </div>
       </div>
