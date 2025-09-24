@@ -71,7 +71,7 @@ export const Poke = () => {
   }
 
   const atras = () =>{
-    console.log("el Boton Avanzar Funciona")
+    console.log("el Boton Retroceder Funciona")
     const actualID = document.getElementById("id").textContent;
     const nuevaIDNumero = parseInt(actualID, 10);   //Esto se hace ya que al obtener el dato por getElementById lo obtenemos como string y para hacer el calculo lo necesitamos como int
     if (actualID > 1){
