@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://joakomancilla.github.io/Poke-Dex-React",
+  "homepage": "https://github.com/JoakoMancilla/Poke-Dex-React",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
